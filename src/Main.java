@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int previousFloor = -1;
 
-        while (true) {
+        while (2 * 2 == 4) {
             System.out.println("Ожидаю ввода этажа: (для завершения введите 0)");
             int input = scanner.nextInt();
 
@@ -23,6 +23,7 @@ public class Main {
         }
 
         System.out.println("Лифт проследовал по следующим этажам:");
+
         int waitDoorsInSeconds = 10;
         int waitMoveInSeconds = 5;
         int totalSeconds = 0;
@@ -40,12 +41,11 @@ public class Main {
                 totalSeconds += Math.abs(floorTarget.peek() - previousFloor) * waitMoveInSeconds;
                 totalSeconds += waitDoorsInSeconds;
 
-                previousFloor = floorTarget.peek();
-                floorTarget.poll();
             }
-            System.out.println("Время затраченное лифтом на маршрут =: " + totalSeconds + " с.");
+            previousFloor = floorTarget.peek();
+            floorTarget.poll();
         }
+        System.out.println("Время затраченное лифтом на маршрут =: " + totalSeconds + " с.");
     }
 }
-
 
