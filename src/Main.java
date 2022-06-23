@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int previousFloor = -1;
 
-        while (2 * 2 == 4) {
+        while (true) {
             System.out.println("Ожидаю ввода этажа: (для завершения введите 0)");
             int input = scanner.nextInt();
 
@@ -28,7 +28,6 @@ public class Main {
         int waitMoveInSeconds = 5;
         int totalSeconds = 0;
         previousFloor = -1;
-
 
         while (!floorTarget.isEmpty()) {
             System.out.printf("этаж %d ", floorTarget.peek());
