@@ -11,6 +11,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        int previousFloor = -1;
         while (true) {
             getFloor();
             System.out.println("Ожидаю ввода этажа: (для завершения введите 0)");
@@ -31,6 +32,7 @@ public class Main {
                 int waitDoorsInSeconds = 10;
                 int waitMoveInSeconds = 5;
                 int totalSeconds = 0;
+
 
                 for (int startLift : floorTarget) {
                     totalSeconds += waitDoorsInSeconds + waitMoveInSeconds;
